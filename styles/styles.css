@@ -1,0 +1,462 @@
+*,
+*::before,
+/* These are typically used for decorative purposes, adding icons, or additional text without altering the HTML structure. */
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root{
+--color1: #FFD700;
+--color2: #515050f5;
+--black: #000000;
+--white: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: --white;
+  /* White background for content */
+  color: --black;
+  /* Darker text for readability */
+  line-height: 1.6;
+  /* Improved line height for better readability */
+}
+
+/* Remove list styles on ul with a list role, which suggests default styling will be removed */
+ul[role="navbar_list"] {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.shadow_animate{
+  color: --black;
+  font-weight: normal;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.shadow_animate::after,
+.shadow_animate::before{
+  content: attr(data-text);
+  position: absolute;
+  font-weight: normal;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make sure it covers the h1 */
+  height: 100%; /* Make sure it covers the h1 */
+}
+
+.shadow_animate::before{
+  left: 2px;
+  color: var(--color2);
+  /*animation: shadow_glow_animate 2s ease-in infinite;  */
+  animation: animate_border 5s linear infinite alternate none;
+}
+
+@keyframes animate_border {
+  0% {
+      clip-path: inset(76% 0 21% 0);
+  }
+
+  5% {
+      clip-path: inset(54% 0 7% 0);
+  }
+
+  10% {
+      clip-path: inset(55% 0 29% 0);
+  }
+
+  15% {
+      clip-path: inset(89% 0 3% 0);
+  }
+
+  20% {
+      clip-path: inset(33% 0 40% 0);
+  }
+
+  25% {
+      clip-path: inset(17% 0 56% 0);
+  }
+
+  30% {
+      clip-path: inset(37% 0 51% 0);
+  }
+
+  35% {
+      clip-path: inset(38% 0 19% 0);
+  }
+
+  40% {
+      clip-path: inset(93% 0 4% 0);
+  }
+
+  45% {
+      clip-path: inset(44% 0 14% 0);
+  }
+
+  50% {
+      clip-path: inset(53% 0 26% 0);
+  }
+
+  55% {
+      clip-path: inset(67% 0 11% 0);
+  }
+
+  60% {
+      clip-path: inset(85% 0 13% 0);
+  }
+
+  65% {
+      clip-path: inset(27% 0 37% 0);
+  }
+
+  70% {
+      clip-path: inset(87% 0 4% 0);
+  }
+
+  75% {
+      clip-path: inset(10% 0 8% 0);
+  }
+
+  80% {
+      clip-path: inset(51% 0 27% 0);
+  }
+
+  85% {
+      clip-path: inset(10% 0 60% 0);
+  }
+
+  90% {
+      clip-path: inset(83% 0 3% 0);
+  }
+
+  95% {
+      clip-path: inset(23% 0 55% 0);
+  }
+
+  100% {
+      clip-path: inset(1% 0 81% 0);
+  }
+}
+
+
+.shadow_animate::after{
+  left: -2px;
+  text-shadow: var(--color1) 3px 0px;
+  /*animation: shadow_glow_animate 2s ease-in infinite;  */
+  animation: glow_animate 5s linear infinite alternate none;
+}
+
+@keyframes shadow_glow_animate {
+
+  0%,
+  100% {
+    text-shadow: var(--color1) 3px 0px;
+    /*  text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00ff26; */
+  }
+
+  50% {
+    text-shadow: var(--color2) -3px 0px;
+    /*text-shadow: -5px -5px 0 #00d4ff, -10px -10px 0 #ff005e; */
+  }
+}
+
+@keyframes glow_animate {
+  0% {
+    clip-path: inset(29% 0 25% 0);
+}
+
+5% {
+    clip-path: inset(9% 0 38% 0);
+}
+
+10% {
+    clip-path: inset(96% 0 1% 0);
+}
+
+15% {
+    clip-path: inset(75% 0 23% 0);
+}
+
+20% {
+    clip-path: inset(46% 0 50% 0);
+}
+
+25% {
+    clip-path: inset(3% 0 46% 0);
+}
+
+30% {
+    clip-path: inset(82% 0 2% 0);
+}
+
+35% {
+    clip-path: inset(88% 0 1% 0);
+}
+
+40% {
+    clip-path: inset(91% 0 8% 0);
+}
+
+45% {
+    clip-path: inset(96% 0 2% 0);
+}
+
+50% {
+    clip-path: inset(59% 0 38% 0);
+}
+
+55% {
+    clip-path: inset(41% 0 53% 0);
+}
+
+60% {
+    clip-path: inset(21% 0 47% 0);
+}
+
+65% {
+    clip-path: inset(89% 0 4% 0);
+}
+
+70% {
+    clip-path: inset(1% 0 95% 0);
+}
+
+75% {
+    clip-path: inset(86% 0 4% 0);
+}
+
+80% {
+    clip-path: inset(95% 0 5% 0);
+}
+
+85% {
+    clip-path: inset(54% 0 36% 0);
+}
+
+90% {
+    clip-path: inset(70% 0 27% 0);
+}
+
+95% {
+    clip-path: inset(6% 0 16% 0);
+}
+
+100% {
+    clip-path: inset(95% 0 2% 0);
+}
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+  /*400px; Adjusted margin for better spacing */
+  padding: 20px 0;
+}
+
+/* Style the header */
+.style_header {
+  padding: 40px 0px 10px;
+}
+
+.navbar {
+  /*background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9)); */
+  max-width: 800px;
+  margin: 0 auto;
+  /* Centers the container */
+  display: flex;
+  justify-content: end;
+  /*border-bottom: 5px solid #e69927b4;  */
+  font-weight: 550;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  padding: 0px 15px !important;
+  /*if you use the !important rule, it will override ALL previous styling rules for that specific property on that element! */
+}
+
+/*
+.navbar ul li a{
+  text-decoration: none;
+  color: #000000;
+}  */
+
+.navbar ul li a:hover {
+  color: var(--color1);
+  /* Hover color change for links */
+}
+
+/*Mobile style */
+@media (max-width: 468px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+}
+
+/* create the wrappers */
+.wrapper_inner {
+  max-width: 800px;
+  margin: 0 auto;
+  /* Centers the container */
+  top: 0;
+  padding: 5px 20px;
+  background-color: var(--white);
+  /* White background for content */
+  /*box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-radius: 8px;
+  /* Rounded corners */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 95%;
+  }
+
+  .wrapper_inner {
+    width: 95%;
+  }
+}
+
+.timeline {
+  list-style-type: none;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--color2)  ;
+  display: inline-block;
+  z-index: 400;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  width: 16px;
+  height: 16px;
+  background: #f9f7f6;
+  border: 2px solid var(--black);
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 0px;
+  z-index: 400;
+}
+
+.timeline_item {
+  margin-top: .5rem !important;
+  background-color: white;
+  padding-left: 20px;
+  border-radius: 5px;
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.timeline_item a {
+  font-size: 18px;
+}
+
+.fixed-home-button {
+  position: fixed;
+  /* Keeps it fixed while scrolling */
+  bottom: 20px;
+  /* Position it 20px from the bottom */
+  right: 20px;
+  /* Position it 20px from the right */
+  background-color: #061468;
+  /* Background color */
+  color: #fff;
+  /* Text color */
+  padding: 15px 20px;
+  /* Padding for the button */
+  border-radius: 50px;
+  /* Rounded corners */
+  text-align: center;
+  /* Center the text */
+  text-decoration: none;
+  /* Remove underline */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Add a shadow */
+  transition: background-color 0.3s;
+  /* Smooth transition for hover effect */
+}
+
+.fixed-home-button:hover {
+  background-color: #061468;
+  /* Darken on hover */
+  transform: scale(1.05);
+  /* Slight scale effect on hover */
+}
+
+
+.fixed-nav-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #061468;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: none;
+  /* Remove default button border */
+  font-size: 16px;
+  /* Adjust font size */
+  cursor: pointer;
+  /* Pointer cursor for button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.fixed-nav-button:hover {
+  background-color: #aeb4d4;
+  transform: scale(1.05);
+}
+
+.dropdown-content {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  bottom: 80px;
+  /* Position above the button */
+  right: 20px;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  /* Ensure it appears above other content */
+}
+
+.dropdown-content a {
+  display: block;
+  /* Make links block-level */
+  padding: 10px 15px;
+  /* Spacing for links */
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  /* Smooth background transition */
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+  /* Light gray on hover */
+}
