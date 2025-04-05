@@ -1,0 +1,166 @@
+/* Box sizing rules */
+*,  
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif; /* More modern font */
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9; /* Light background color for contrast */
+  color: #333; /* Darker text for readability */
+  line-height: 1.6; /* Improved line height for better readability */
+}
+
+/* Remove list styles on ul, ol elements with a list role */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  padding: 0;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin-top: 40px; /* Adjusted margin for better spacing */
+  padding: 20px 0;
+  background-color: #5b6dcd; /* Background for footer */
+  color: #fff; /* Footer text color */
+}
+
+/* Style the header */
+.style_header {
+  padding: 40px 0;
+  background: linear-gradient(rgba(26, 26, 64, 0.9), rgba(26, 26, 64, 0.9)); /* Background for header */
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; 
+ align-items: center; 
+  padding: 10px 20px; /* Added padding */
+  position: fixed; /* Fix navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top */
+}
+
+.navbar img {
+  height: 40px; /* Adjust image size for better proportion */
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  padding: 10px 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.navbar ul li a:hover {
+  color: #ffeb3b; /* Hover color change for links */
+}
+
+/* Create the wrappers */
+.wrapper_inner {
+  width: 100%;
+  max-width: 800px;
+  margin: 80px auto 0; /* Added top margin to avoid overlap with fixed navbar */
+  padding: 20px;
+  background-color: #fff; /* White background for content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Define flex constants */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 468px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}
+
+.flex_center {
+  justify-content: center;
+}
+
+.flex_right {
+    justify-content: right;
+}
+
+/* Fixed Home Button */
+.fixed-home-button {
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  background-color: #5b6dcd; 
+  color: #fff; 
+  padding: 15px 20px; 
+  border-radius: 50px; 
+  text-align: center; 
+  text-decoration: none; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: background-color 0.3s, transform 0.2s; /* Added transform transition */
+}
+
+.fixed-home-button:hover {
+  background-color: #4a5ebd; 
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.fixed-nav-button {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #5b6dcd; 
+    color: #fff; 
+    padding: 15px 20px; 
+    border-radius: 50px; 
+    border: none; /* Remove default button border */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor for button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s, transform 0.2s; 
+  }
+  
+  .fixed-nav-button:hover {
+    background-color: #4a5ebd; 
+    transform: scale(1.05); 
+  }
+  
+  .dropdown-content {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    bottom: 80px; /* Position above the button */
+    right: 20px; 
+    background-color: white; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+  
+  .dropdown-content a {
+    display: block; /* Make links block-level */
+    padding: 10px 15px; /* Spacing for links */
+    color: #333; 
+    text-decoration: none; 
+    transition: background-color 0.3s; /* Smooth background transition */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+  }

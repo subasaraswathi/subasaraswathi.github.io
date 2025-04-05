@@ -23,9 +23,9 @@ a {
 body {
   margin: 0;
   padding: 0;
-  background-color: --white;
+  background-color: var(--white);
   /* White background for content */
-  color: --black;
+  color: var(--black);
   /* Darker text for readability */
   line-height: 1.6;
   /* Improved line height for better readability */
@@ -40,7 +40,7 @@ ul[role="navbar_list"] {
 }
 
 .shadow_animate{
-  color: --black;
+  color: var(--black);
   font-weight: normal;
   position: relative;
   text-transform: uppercase;
