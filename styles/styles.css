@@ -303,7 +303,7 @@ footer {
   /* Hover color change for links */
 }
 
-.timeline_item a:hover {
+.link:hover {
   color: var(--color1);
   /* Hover color change for links */
 }
